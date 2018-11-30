@@ -14,12 +14,12 @@ describe('Built-in Directives', function () {
   });
 
   it('should change first Teapot header', async () => {
-    let firstLabel = element.all(by.css('h4')).get(0);
+    let firstLabel = element.all(by.css('p')).get(0);
     let firstInput = element.all(by.css('input')).get(0);
 
-    expect(firstLabel.getText()).toEqual('Result: Teapot');
+    expect(firstLabel.getText()).toEqual('Current item name: Teapot');
     firstInput.sendKeys('abc');
-    expect(firstLabel.getText()).toEqual('Result: Teapotabc');
+    expect(firstLabel.getText()).toEqual('Current item name: Teapotabc');
   });
 
 
@@ -48,7 +48,7 @@ describe('Built-in Directives', function () {
   });
 
   it('should hide app-item-detail', function () {
-    let hiddenMessage = element.all(by.css('p')).get(5);
+    let hiddenMessage = element.all(by.css('p')).get(11);
     let hiddenDiv = element.all(by.css('app-item-detail')).get(2);
 
     expect(hiddenMessage.getText()).toContain('in the DOM');
