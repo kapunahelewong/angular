@@ -1302,8 +1302,8 @@ the host elements to which they are attached.
 
 This section is an introduction to the common built-in structural directives:
 
-* [`NgIf`](guide/template-syntax#ngIf)&mdash;conditionally add or remove an element from the DOM.
-* [`NgFor`](guide/template-syntax#ngFor)&mdash;repeat a template for each item in a list.
+* [`NgIf`](guide/template-syntax#ngIf)&mdash;conditionally creates or destroys subviews from the template.
+* [`NgFor`](guide/template-syntax#ngFor)&mdash;repeat a node for each item in a list.
 * [`NgSwitch`](guide/template-syntax#ngSwitch)&mdash;a set of directives that switch among alternative views.
 
 <div class="alert is-helpful">
@@ -1342,9 +1342,11 @@ on the asterisk, see the [asterisk (*) prefix](guide/structural-directives#the-a
 
 </div>
 
-When the `isActive` expression returns a truthy value, `NgIf` adds the `ItemDetailComponent` to the DOM.
+When the `isActive` expression returns a truthy value, `NgIf` adds the
+`ItemDetailComponent` to the DOM.
 When the expression is falsy, `NgIf` removes the `ItemDetailComponent`
 from the DOM, destroying that component and all of its sub-components.
+
 
 #### Show/hide vs. `NgIf`
 
