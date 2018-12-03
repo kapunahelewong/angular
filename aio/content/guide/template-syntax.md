@@ -1327,8 +1327,8 @@ to group elements when there is no suitable host element for the directive.
 
 ### NgIf
 
-You can add or remove an element from the DOM by applying an `NgIf` directive to
-a host element.
+You can create or destroy a subview from the template by applying an `NgIf` directive to a host element.
+
 Bind the directive to a condition expression like `isActive` in this example.
 
 <code-example path="built-in-directives/src/app/app.component.html" region="NgIf-1" header="src/app/app.component.html" linenums="false">
@@ -1341,6 +1341,8 @@ on the asterisk, see the [asterisk (*) prefix](guide/structural-directives#the-a
 [Structural Directives](guide/structural-directives).
 
 </div>
+
+When using `*ngIf` on a host element, angular translates this instruction into an `<ng-template>` around the host element, then this template would be controlled by `NgIf` directive.
 
 When the `isActive` expression returns a truthy value, `NgIf` adds the
 `ItemDetailComponent` to the DOM.
@@ -1430,8 +1432,7 @@ The string `"let item of items"` means:
 > *Take each item in the `items` array, store it in the local `item` looping variable, and
 make it available to the templated HTML for each iteration.*
 
-Angular translates this instruction into an `<ng-template>` around the host element,
-then uses this template repeatedly to create a new set of elements and bindings for each `item`
+Similar to `*ngIf`, the microsyntax would be expanded to an `<ng-template>` wrapper, then `NgFor` uses this template to repeatedly create a new set of elements and bindings for each `item`
 in the list.
 
 For more information about microsyntax, see the [Structural Directives](guide/structural-directives#microsyntax) guide.
