@@ -132,6 +132,19 @@ a {
   text-decoration: none;
 }
 
+// Add title attribute as tooltip on :focus for links within paragraphs in docs content
+content p a[title]:focus:after {
+  content: attr(title);
+  position: absolute;
+  margin-top: -2rem;
+  background-color: #444444;
+  color: white;
+  padding: 0 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .app-toolbar a {
   @include font-size(16);
   font-weight: 400;
@@ -204,7 +217,7 @@ code {
 .folder-guide,
 .folder-start,
 .folder-tutorial {
-  
+
   aio-doc-viewer{
     a {
       &[href^="http:"]::after,
@@ -214,7 +227,7 @@ code {
         margin-left: 2px;
         position: relative;
         @include line-height(24);
-        vertical-align: bottom; 
+        vertical-align: bottom;
       }
     }
 
