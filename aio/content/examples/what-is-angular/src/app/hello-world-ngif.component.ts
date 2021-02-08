@@ -1,6 +1,6 @@
 // #docplaster
 
-// #docregion component
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
   export class HelloWorldNgIfComponent {
     message = 'I\'m read only!';
     canEdit = false;
-  
+
     onEditClick(){
       this.canEdit = !this.canEdit;
       if (this.canEdit) {
@@ -27,8 +27,7 @@ import { Component } from '@angular/core';
       } else {
         this.message = 'I\'m read only!';
       }
-  
+
     }
   }
 
-// #enddocregion component

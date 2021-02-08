@@ -1,6 +1,6 @@
 // #docplaster
 
-// #docregion component
+
 import { Component, Injectable } from '@angular/core';
 
 @Injectable({providedIn: 'root'})
@@ -27,4 +27,4 @@ export class HelloWorldDependencyInjectionComponent  {
     this.count++;
   }
 }
-// #enddocregion component
+

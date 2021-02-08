@@ -2,7 +2,7 @@
 
 This topic can help you understand Angular: what Angular is, what advantages it provides, and what you might expect as you start to build your applications.
 
-Angular is a development platform, built on TypeScript, that includes: 
+Angular is a development platform, built on TypeScript, that includes:
 
 * A component-based framework for building scalable web applications
 * A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
@@ -62,14 +62,11 @@ Components are the building blocks that compose an application. A component is a
 The following is a minimal Angular component.
 
 <code-example
-  path="what-is-angular/src/app/app.component.ts"
-  region="import, component"></code-example>
+  path="what-is-angular/src/app/app.component.ts"></code-example>
 
 To use this component, you write the following in a template:
 
-<code-example
-  path="what-is-angular/src/index.html"
-  region="component"></code-example>
+<code-example path="what-is-angular/src/index.html"></code-example>
 
 When Angular renders this component, the resulting DOM looks like this:
 

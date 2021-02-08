@@ -1,6 +1,5 @@
 // #docplaster
 
-// #docregion component
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,9 +10,3 @@ import { Component } from '@angular/core';
 export class HelloWorldComponent  {
   // The code in this class drives the component's behavior.
 }
-
-// #enddocregion component
-
-
-
-
